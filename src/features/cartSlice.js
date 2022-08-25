@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit/";
 
+//initial state of the cart
 const initialState = {
   cartItems: [],
   cartTotalQuantity: 0,
@@ -10,6 +11,7 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    //add to cary action
     addToCart(state, action) {
       const itemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
@@ -22,8 +24,8 @@ const cartSlice = createSlice({
       } else {
         state.cartItems.push(action.payload);
       }
-      //state.cartItems.push(action.payload);
     },
+    //remove from cary action
     removeFromCart(state, action) {
       const itemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
@@ -37,8 +39,8 @@ const cartSlice = createSlice({
       } else {
         state.cartItems.splice(itemIndex, 1);
       }
-      //state.cartItems.push(action.payload);
     },
+    //empty cary action
     clearCart(state) {
       state.cartItems = [];
       state.cartTotalAmount = 0;

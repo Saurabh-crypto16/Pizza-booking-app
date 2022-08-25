@@ -7,7 +7,7 @@ function FilterProduct(props) {
   }
   return (
     <div className="filter-area">
-      <label>Apply Filter - </label>
+      <label>Apply Filter -- </label>
       <select name="isAvailable" onChange={onFilterValueChange}>
         <option value="all">All</option>
         <option value="veg">Veg</option>

@@ -12,12 +12,10 @@ function Cart() {
 
   const handleAddToCart = (e) => {
     dispatch(addToCart(e));
-    //setQuantity(quantity + 1);
   };
 
   const handleSubToCart = (e) => {
     dispatch(removeFromCart(e));
-    //setQuantity(quantity - 1);
   };
 
   const handleClickToClearCart = () => {

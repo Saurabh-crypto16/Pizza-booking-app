@@ -11,6 +11,7 @@ function PizzaWrapper(props) {
   const [sizeSelected, setSizeSelected] = useState([]);
   const [toppingsSelected, setToppingsSelected] = useState([]);
 
+  //craeting options of size for Select component
   const makeSizeOptions = () => {
     {
       props.size[0].items.map((obj) => {
@@ -24,6 +25,7 @@ function PizzaWrapper(props) {
 
   makeSizeOptions();
 
+  //craeting options of toppings for Select component
   const makeToppingsOptions = () => {
     {
       props.toppings[0].items.map((obj) => {
@@ -37,6 +39,7 @@ function PizzaWrapper(props) {
 
   makeToppingsOptions();
 
+  //select size option
   const selectSize = () => {
     if (props.size[0].isRadio === true) {
       return (
@@ -60,6 +63,7 @@ function PizzaWrapper(props) {
     }
   };
 
+  //select topping option
   const selectToppings = () => {
     if (props.toppings[0].isRadio === true) {
       return (
@@ -86,11 +90,13 @@ function PizzaWrapper(props) {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(0);
 
+  //adding to cart store
   const handleAddToCart = (e) => {
     dispatch(addToCart(e));
     setQuantity(quantity + 1);
   };
 
+  //removing from cart store
   const handleSubToCart = (e) => {
     dispatch(removeFromCart(e));
     setQuantity(quantity - 1);

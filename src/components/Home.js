@@ -14,13 +14,10 @@ function Home() {
     axios
       .get("https://run.mocky.io/v3/ec196a02-aaf4-4c91-8f54-21e72f241b68")
       .then((res) => {
-        //console.log(res.data);
         res.data.map((item) => (item.quantity = 1));
         setPizzaList(res.data);
       });
   }, [pizzaList]);
-
-  //console.log(pizzaList);
 
   function onFilterValueSelected(filterValue) {
     filterTextValueUpdate(filterValue);
@@ -28,7 +25,6 @@ function Home() {
 
   function onSortValueSelected(sortValue) {
     sortTextValueUpdate(sortValue);
-    //console.log(sortValue);
   }
 
   let filteredProductList = pizzaList.filter((product) => {
