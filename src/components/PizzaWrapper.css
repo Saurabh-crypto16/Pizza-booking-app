@@ -1,0 +1,70 @@
+.image {
+  width: 450px;
+  height: 450px;
+  border-radius: 10px;
+}
+
+.pizzaWrapperBase {
+  margin: 50px 50px 50px 50px;
+  padding: 50px 50px 50px 50px;
+  background-color: lightyellow;
+  max-width: 550px;
+}
+
+.body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.toppings {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.size_list_item:hover,
+.toppings_list_item:hover {
+  background-color: whitesmoke;
+}
+
+.pizza-name {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.size {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.qty-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.qty {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.qty-btn {
+  width: 35px;
+}
+
+.label {
+  font-size: 25px;
+}
+
+.pizza-description {
+  margin-top: 5px;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  margin-top: 10px;
+
+  height: 25px; /* Height of the footer */
+}
